@@ -22,6 +22,6 @@ class RawPlugin {
 
 RawPlugin.prototype.brunchPlugin = true;
 RawPlugin.prototype.type = 'template';
-RawPlugin.prototype.pattern = /\.(plain|raw|example)$/;
+RawPlugin.prototype.pattern = /\.(raw|plain|example)$/;
 
 module.exports = RawPlugin;
