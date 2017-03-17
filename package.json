@@ -11,7 +11,7 @@
     "brunch-compiler"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint . && mocha"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,8 @@
   },
   "devDependencies": {
     "eslint": "^3.17.1",
-    "eslint-config-brunch": "^1.0.0"
+    "eslint-config-brunch": "^1.0.0",
+    "mocha": "^3.2.0"
   },
   "eslintConfig": {
     "extends": "brunch"
