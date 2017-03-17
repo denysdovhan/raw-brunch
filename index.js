@@ -8,7 +8,7 @@ class RawPlugin {
   }
 
   wrapper(content) {
-    return `module.exports = ${JSON.stringify(content)}`
+    return `module.exports = ${JSON.stringify(content)}`;
   }
 
   compile(file) {

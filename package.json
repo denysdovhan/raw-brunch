@@ -2,6 +2,14 @@
   "name": "raw-brunch",
   "version": "1.0.0",
   "description": "A Brunch plugins for raw modules",
+  "author": "Denys Dovhan <email@denysdovhan.com> (http://denysdovhan.com/)",
+  "license": "MIT",
+  "keywords": [
+    "brunch",
+    "raw",
+    "brunch-plugin",
+    "brunch-compiler"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -9,16 +17,15 @@
     "type": "git",
     "url": "git+https://github.com/denysdovhan/raw-brunch.git"
   },
-  "keywords": [
-    "brunch",
-    "raw",
-    "brunch-plugin",
-    "brunch-compiler"
-  ],
-  "author": "Denys Dovhan <email@denysdovhan.com> (http://denysdovhan.com/)",
-  "license": "MIT",
+  "homepage": "https://github.com/denysdovhan/raw-brunch#readme",
   "bugs": {
     "url": "https://github.com/denysdovhan/raw-brunch/issues"
   },
-  "homepage": "https://github.com/denysdovhan/raw-brunch#readme"
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-brunch": "^1.0.0"
+  },
+  "eslintConfig": {
+    "extends": "brunch"
+  }
 }
