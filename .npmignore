@@ -1,0 +1,6 @@
+.git/
+*~
+*.bak
+.DS_Store
+npm-debug.log
+/test.js
