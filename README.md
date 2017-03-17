@@ -10,7 +10,9 @@ This plugin is needed for requiring raw data in your JavaScript files, like Mark
 
 ## Install
 
-    npm install --save-dev raw-brunch
+```
+npm install --save-dev raw-brunch
+```
 
 ## Usage
 
