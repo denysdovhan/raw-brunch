@@ -1,0 +1,24 @@
+{
+  "name": "raw-brunch",
+  "version": "1.0.0",
+  "description": "A Brunch plugins for raw modules",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denysdovhan/raw-brunch.git"
+  },
+  "keywords": [
+    "brunch",
+    "raw",
+    "brunch-plugin",
+    "brunch-compiler"
+  ],
+  "author": "Denys Dovhan <email@denysdovhan.com> (http://denysdovhan.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/denysdovhan/raw-brunch/issues"
+  },
+  "homepage": "https://github.com/denysdovhan/raw-brunch#readme"
+}
