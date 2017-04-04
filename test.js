@@ -6,16 +6,20 @@ const Plugin = require('.');
 describe('raw-brunch', () => {
 
   it('should have #compile method', () => {
-    const plugin = new Plugin({ plugins: {} });
+    const plugin = new Plugin({
+      plugins: {},
+    });
     assert.equal(typeof plugin.compile, 'function');
   });
 
   it('should export content of file', () => {
     const path = 'file.raw';
     const data = 'lorem ipsum dolor sit amet';
-    const expected = `module.exports = "${content}"`;
+    const expected = `module.exports = "${data}"`;
 
-    const plugin = new Plugin({ plugins: {} });
+    const plugin = new Plugin({
+      plugins: {},
+    });
     const res = plugin.compile({path, data});
 
     assert.equal(res.path, path);
