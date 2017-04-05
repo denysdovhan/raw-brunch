@@ -5,42 +5,40 @@ const Plugin = require('.');
 
 describe('raw-brunch', () => {
 
-  it('should be a valid plugin', () => {
-    const plugin = new Plugin({});
-
-    assert.ok(plugin);
+  it('should have #compile method', () => {
+    const plugin = new Plugin({
+      plugins: {},
+    });
     assert.equal(typeof plugin.compile, 'function');
   });
 
   it('should export content of file', () => {
-    const filename = 'file.raw';
-    const content = 'lorem ipsum dolor sit amet';
-    const expected = `module.exports = "${content}"`;
+    const path = 'file.raw';
+    const data = 'lorem ipsum dolor sit amet';
+    const expected = `module.exports = "${data}"`;
 
-    const plugin = new Plugin({});
+    const plugin = new Plugin({
+      plugins: {},
+    });
+    const res = plugin.compile({path, data});
 
-    return plugin.compile({path: filename, data: content})
-      .then(result => {
-        assert.equal(result.path, filename);
-        assert.equal(result.data, expected);
-      });
+    assert.equal(res.path, path);
+    assert.equal(res.data, expected);
   });
 
   it('should use custom wrapper', () => {
-    const filename = 'file.raw';
-    const content = 'something';
-    const wrapper = input => ''; // eslint-disable-line
+    const path = 'file.raw';
+    const data = 'something';
+    const wrapper = () => '';
 
     const plugin = new Plugin({
       plugins: {
         raw: {wrapper},
       },
     });
+    const res = plugin.compile({path, data});
 
-    return plugin.compile({path: filename, data: content})
-      .then(result => {
-        assert.equal(result.path, filename);
-        assert.equal(result.data, wrapper(content));
-      });
+    assert.equal(res.path, path);
+    assert.equal(res.data, wrapper(data));
   });
 });

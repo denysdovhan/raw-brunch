@@ -2,7 +2,6 @@
 
 class RawPlugin {
   constructor(config) {
-    if (!config.plugins) config.plugins = {};
     this.config = config.plugins.raw || {};
     if (this.config.pattern) this.pattern = this.config.pattern;
     if (this.config.wrapper) this.wrapper = this.config.wrapper;
@@ -13,10 +12,10 @@ class RawPlugin {
   }
 
   compile(file) {
-    return Promise.resolve({
+    return {
       data: this.wrapper(file.data),
       path: file.path,
-    });
+    };
   }
 }
 
