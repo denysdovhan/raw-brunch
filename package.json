@@ -11,7 +11,8 @@
     "brunch-compiler"
   ],
   "scripts": {
-    "test": "eslint . && mocha"
+    "test": "eslint . && mocha",
+    "postpublish": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
